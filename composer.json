@@ -1,0 +1,21 @@
+{
+  "name": "choate/yii2-smses",
+  "description": "Yii2 SMSes Manager",
+  "type": "library",
+  "require": {
+    "php": ">=5.5.9",
+  },
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "choate",
+      "email": "choate.yao@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "choate\\smses\\": "src"
+    }
+  }
+}
