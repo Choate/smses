@@ -1,6 +1,6 @@
 {
-  "name": "choate/yii2-smses",
-  "description": "Yii2 SMSes Manager",
+  "name": "choate/smses",
+  "description": "SMSes Manager",
   "type": "library",
   "require": {
     "php": ">=5.5.9",
