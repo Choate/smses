@@ -117,14 +117,15 @@ class QCloudAdapter implements AdapterInterface
         return null;
     }
 
-    protected function response($response)
+    protected function response($responseJson)
     {
-        $result = json_decode($response);
-        $valid = strcmp($result->result, '0') === 0 ;
+        $response = json_decode($responseJson, true);
+        $result = isset($response['result']) ? $response['result'] : null;
+        $valid = strcmp($result, '0') === 0 ;
         if ($valid) {
             return $valid;
         } else {
-            throw new SendException($result->errmsg);
+            throw new SendException($responseJson);
         }
     }
 

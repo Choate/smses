@@ -149,7 +149,7 @@ class Connection
      */
     public function isDebug()
     {
-        return $this->debug;
+        return (bool)$this->debug;
     }
 
     /**
@@ -168,7 +168,7 @@ class Connection
      */
     protected function writeExceptionLog($category, $appName, $exception)
     {
-        if (empty($this->logger) || $this->isDebug() === false) {
+        if (empty($this->logger) && $this->isDebug() === false) {
             new InvalidConfigException('The "logger" or "debug" property must be set.');
         }
 
