@@ -3,6 +3,7 @@
   "description": "SMSes Manager",
   "type": "library",
   "require": {
+    "qcloudsms/qcloudsms_php": "0.1.*",
     "php": ">=5.5.9"
   },
   "license": "BSD-3-Clause",
